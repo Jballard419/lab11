@@ -74,7 +74,7 @@ int main(int argc, char const *argv[]) {
       Prim(array, n);
       Prim_time[i][key +1]=time1.stop();
 
-    n= n*2;
+
   }
 }
       std::cout << "\n Kruskal_time: \n " << std::endl;
