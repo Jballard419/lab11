@@ -1,5 +1,5 @@
-#include "skew_heap.h"
-#include "leftist_heap.h"
+#include "Kruskal.cpp"
+
 #include <fstream>
 #include "Timer.cpp"
 

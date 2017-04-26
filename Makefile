@@ -1,5 +1,7 @@
-Skew_Heap: main.o
-	g++ -g -std=c++11 main.o  -o minspan
+TEST: test.o
+		g++ -g -std=c++11 test.o  -o Test_bench
+test.o: test.cpp  Kruskal.cpp
+		g++ -g -std=c++11 -c test.cpp  Kruskal.cpp
 main.o: main.cpp  Kruskal.cpp
 	g++ -g -std=c++11 -c main.cpp  Kruskal.cpp
 Kruskal.o: Kruskal.cpp
@@ -11,7 +13,7 @@ Linkedlist.o: linkedlist.h linkedlist.hpp
 node.o: node.h node.hpp
 	g++ -Wall -std=c++11 -c node.h
 clean:
-	rm *.o *.gch Skew_Heap
+	rm *.o *.gch Test_bench
 tar: clean
 	-mkdir Ballard_Lab05
 	cp * Ballard_Lab05
