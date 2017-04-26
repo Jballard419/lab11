@@ -1,4 +1,4 @@
-#include "Kruskal.cpp"
+#include "Kruskal_time.cpp"
 
 #include <fstream>
 #include "Timer.cpp"
@@ -13,18 +13,18 @@ int main(int argc, char const *argv[]) {
   double x;
   long y;
   int n= 1000;
-  double Kruskal[8][7];
+  double Kruskal_time[8][7];
   double Prim_time[8][7];
 
-  Kruskal[0][0]=n;
+  Kruskal_time[0][0]=n;
 
   Prim_time[0][0]=n;
   long** array;
   for(int i= 1; i<4; i++)
   {
-    Kruskal[i][0]=Kruskal[i-1][0]*2;
+    Kruskal_time[i][0]=Kruskal_time[i-1][0]*2;
 
-    Prim_time[i][0]=Kruskal[i-1][0]*2;
+    Prim_time[i][0]=Kruskal_time[i-1][0]*2;
 
   } // stores n values
 
@@ -68,7 +68,7 @@ int main(int argc, char const *argv[]) {
       time1.start();
       Kruskal(array, n);
 
-      Kruskal[i][key +1]=time1.stop();
+      Kruskal_time[i][key +1]=time1.stop();
 
       time1.start();
       Prim(array, n);
@@ -76,20 +76,20 @@ int main(int argc, char const *argv[]) {
 
     n= n*2;
   }
-      std::cout << "\n Kruskal: \n " << std::endl;
+      std::cout << "\n Kruskal_time: \n " << std::endl;
   for( int i = 0; i<4; i++) // loop for n values
   {
 
     for (int j=0 ; j< 7 ; j++)
     {
       if (j==6) {
-        Kruskal[i][6]= Kruskal[i][6]/5;
+        Kruskal_time[i][6]= Kruskal_time[i][6]/5;
       }
       if(j>0 && j!=6)
       {
-        Kruskal[i][6]= Kruskal[i][6]+Kruskal[i][j];
+        Kruskal_time[i][6]= Kruskal_time[i][6]+Kruskal_time[i][j];
       }
-      std::cout << Kruskal[i][j] << " ";
+      std::cout << Kruskal_time[i][j] << " ";
     }
     std::cout << "\n";
 
