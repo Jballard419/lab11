@@ -30,7 +30,7 @@ int main(int argc, char const *argv[]) {
 
   for( int i = 0; i<4; i++) // loop for n values
   {
-    long array = new long*[n];
+     array = new long*[n];
 
     for (int j = 0; j < n; j++)
     {
