@@ -1,4 +1,4 @@
-#include "Kruskal_time.cpp"
+#include "Kruskal.cpp"
 
 #include <fstream>
 #include "Timer.cpp"
