@@ -30,8 +30,8 @@ int main(int argc, char const *argv[]) {
 
   for( int i = 0; i<4; i++) // loop for n values
   {
+     n= Kruskal_time[i][0];
      array = new long*[n];
-
     for (int j = 0; j < n; j++)
     {
       array[j]= new long[n];
