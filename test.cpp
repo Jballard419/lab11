@@ -76,6 +76,7 @@ int main(int argc, char const *argv[]) {
 
     n= n*2;
   }
+}
       std::cout << "\n Kruskal_time: \n " << std::endl;
   for( int i = 0; i<4; i++) // loop for n values
   {
