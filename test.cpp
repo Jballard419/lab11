@@ -66,13 +66,13 @@ int main(int argc, char const *argv[]) {
       }
 
       time1.start();
+      Prim(array, n);
+      Prim_time[i][key +1]=time1.stop();
+      time1.start();
       Kruskal(array, n);
 
       Kruskal_time[i][key +1]=time1.stop();
 
-      time1.start();
-      Prim(array, n);
-      Prim_time[i][key +1]=time1.stop();
 
 
   }
