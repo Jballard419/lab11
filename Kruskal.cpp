@@ -1,7 +1,8 @@
 #include <iostream>
 #include "skew_heap.h"
 struct edge_t {
-  int x,y,cost;
+  int x,y;
+  long cost;
   bool operator <(const edge_t* x)
   {
     return this->cost<x->cost;
@@ -10,10 +11,10 @@ struct edge_t {
   {
     return this->cost>x->cost;
   };
-  edge_t(int x, int y, int c):x(x),y(y),cost(c){};
+  edge_t(int x, int y, long c):x(x),y(y),cost(c){};
 };
 
-void Kruskal(int** cost, int x)
+void Kruskal(long** cost, int x)
 {
   //build Q
   Skew_Heap<edge_t*>* edges = new Skew_Heap<edge_t*>();
@@ -113,7 +114,7 @@ void Kruskal(int** cost, int x)
 }
 
 
-void Prim(int** cost, int x)
+void Prim(long** cost, int x)
 {
   edge_t* temp;
   edge_t* soln[x-1];
